@@ -131,7 +131,20 @@ input[type="range"]:hover {
   </head>
   <body>
     <div class="mainbox" style="width: 50%;height: 400px;background-color: rgba(236, 236, 236,0.6) ;margin-left: 325px; margin-top: 150px;border-radius: 13px;"></div>
-    <div id="text"><p style="font-family:dirtyline;margin-top: -575px;margin-left: -130px;">Aum Namah Shivaya</p></div>
+    <div id="text"><p style="font-family:dirtyline;margin-top: -575px;margin-left: -130px;" id="ANS"></p></div>
+    <script>
+      const para = document.getElementById("ANS");
+      const text = "Aum Namah Shivaya"
+      let index = 0;
+      
+      function Typewriter(){
+        if(index<text.length){
+          para.innerHTML+=text.charAt(index);
+          index++
+        }
+      }
+      setInterval(Typewriter,100);
+    </script>
     
     <div>
       <label for="red"><p style="font-family: clashdisplay;padding-right: 10px;color: red;margin-top: -500px;margin-left: -190px;">Red:</p></label>
